@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Overview from "./components/Overview"
+import Products from "./components/Products"
 import Services from "./components/Services"
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
      <Hero />
      <Overview />
      <Services />
+     <Products />
     </div>
   )
 }

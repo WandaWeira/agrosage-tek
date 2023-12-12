@@ -1,31 +1,8 @@
-import React, { useState } from "react";
-
-const ServiceItem = ({ name, description, imageUrl }) => {
-    const [isHovered, setIsHovered] = useState(false);
-  
-    const containerClass = `relative p-2 shadow-md border ${
-      isHovered ? 'w-96' : 'w-48'
-    } flex flex-col items-center cursor-pointer`;
-  
-    return (
-      <div
-        className={containerClass}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <img src={imageUrl} alt={name} className="w-20 rounded-full" />
-        <p className="p-2 font-semibold">{name}</p>
-        {isHovered && (
-          <div className="absolute bottom-0 left-0 right-0 bg-white p-2 border-t-2 rounded-b-lg shadow-lg">
-            <p>{description}</p>
-          </div>
-        )}
-      </div>
-    );
-  };
-  
+import React from "react";
+// import { useHistory } from "react-router-dom";
 
 const Services = () => {
+  
   const services = [
     {
       name: "Food Storage and preservation services",
@@ -66,8 +43,15 @@ const Services = () => {
     // ... Add other services here
   ];
 
+  // let history = useHistory();
+
+  const serviceDetail = (service) => {
+    // history.push("/service-detail", { service }); 
+    // history.push(`/${service.name}`, { service });
+  };
+
   return (
-    <div className="flex flex-col items-center my-28 bg-gray-100 h-screen">
+    <div className="flex flex-col items-center my-28 bg-gray-100">
       <h1 className="text-4xl font-bold mt-10">Our Services</h1>
       <p className="my-10">
         Unlock Your Potential with Our Specialized Services Tailored to Your
@@ -75,12 +59,20 @@ const Services = () => {
       </p>
       <div className="flex flex-wrap justify-center gap-10 my-10">
         {services.map((service, index) => (
-          <ServiceItem
+          <div
             key={index}
-            name={service.name}
-            description={service.description}
-            imageUrl={service.imageUrl}
-          />
+            className="p-2 shadow-xl border rounded-xl w-52 flex flex-col items-center bg-white"
+          >
+            <img
+              src={service.imageUrl}
+              alt={service.name}
+              className="w-20 rounded-full"
+            />
+            <p className="p-2 text-sm text-center">{service.name}</p>
+            {/* <button onClick={() => serviceDetail(service)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Read More
+            </button> */}
+          </div>
         ))}
       </div>
     </div>
