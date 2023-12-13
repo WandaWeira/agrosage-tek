@@ -51,7 +51,7 @@ const Services = () => {
   };
 
   return (
-    <div className="flex flex-col items-center my-28 bg-gray-100">
+    <div className="flex flex-col items-center my-28 bg-gray-50">
       <h1 className="text-4xl font-bold mt-10">Our Services</h1>
       <p className="my-10">
         Unlock Your Potential with Our Specialized Services Tailored to Your

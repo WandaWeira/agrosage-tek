@@ -22,14 +22,25 @@ const Products = () => {
         {Products.map((product, index) => (
           <div
             key={index}
-            className="p-2 shadow-xl border rounded-xl w-52 flex flex-col items-center bg-gray-100"
+            className="p-2 shadow-xl border rounded-xl w-52 flex flex-col items-center bg-gray-50"
           >
             <img
               src={product.imageUrl}
               alt={product.name}
               className="w-20 rounded-full"
             />
-            <p className="p-2 text-sm text-center">{product.name}</p>
+            <p className="p-2 text-sm text-center font-semibold">{product.name}</p>
+            <p className="text-xs p-2">
+              The Fresh Stops are simply large communal cold storage facilities
+              powered by solar or electricity, depending on their location.
+              {/* They are designed to provide controlled humidity and temperature
+              conditions that preserve the freshness and quality of agricultural
+              products for at least three months. Fresh stops are cooled using
+              air conditioning systems and powered by solar energy, enabling
+              them to operate at negligible cost as opposed to conventional
+              refrigeration systems. */}
+            </p>
+            <p>Read more</p>
           </div>
         ))}
       </div>
