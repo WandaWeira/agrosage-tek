@@ -7,7 +7,6 @@ import Products from "./Products";
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Header />
       <Hero />
       <Services />
       <Products />

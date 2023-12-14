@@ -4,10 +4,10 @@ import Team from "./Team";
 
 const About = () => {
   return (
-    <div className="p-10">
+    <div className="p-10 bg-gray-50">
       <Team />
       <Overview />
-      <div className="bg-gray-50 shadow-md rounded-md p-8 mt-10">
+      <div className="bg-gray-100 shadow-md rounded-md p-8 mt-10">
         <p className="text-gray-700 text-lg leading-relaxed">
           Agrosage Tek Uganda Limited (ATUL) is dedicated to eradicating poverty
           among smallholder farmers in Uganda by reducing postharvest losses.
