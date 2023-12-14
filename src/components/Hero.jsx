@@ -10,12 +10,12 @@ const Hero = () => {
   return (
     <div className="relative text-center">
       <ImageCarousel images={images} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2">
-        <p className=" text-white text-5xl font-bold">
+      <div className="absolute top-0 bg-black/60 w-screen h-full">
+        <p className="mt-40 text-white text-5xl font-bold ">
           Modern Agricultural <br />
           <span className="my-8">Solutions</span>
         </p>
-        <div className="flex gap-10 mt-10 mx-28">
+        <div className="flex justify-center gap-10 mt-10 mx-28">
           <div className="bg-sky-500 text-white p-2 rounded-md w-48 text-center">
             Introduction
           </div>

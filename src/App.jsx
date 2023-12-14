@@ -1,19 +1,14 @@
+import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Overview from "./components/Overview";
-import Products from "./components/Products";
-import Services from "./components/Services";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Hero />
-      <Overview />
-      <Services />
-      <Products />
-      <About />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </div>
   );
 }

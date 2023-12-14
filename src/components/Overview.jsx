@@ -29,7 +29,7 @@ const Overview = () => {
   const shortOverview = overviewContent.slice(0, 200) + "...";
 
   return (
-    <div className="container mx-auto px-2 py-8 my-10">
+    <div className="mx-auto px-2 py-8 my-10 bg-gray-50">
       <div className="flex flex-wrap justify-between -mx-2">
         <div className="w-full md:w-1/3 px-4 mb-8 md:mb-0">
           <h2 className="text-4xl font-bold mb-3">Overview</h2>
