@@ -2,7 +2,6 @@ import React from "react";
 // import { useHistory } from "react-router-dom";
 
 const Services = () => {
-  
   const services = [
     {
       name: "Food Storage and preservation services",
@@ -40,19 +39,11 @@ const Services = () => {
       imageUrl:
         "https://agrosagetekugandalimited.com/images/Manufacturing%20.jpg",
     },
-    // ... Add other services here
   ];
 
-  // let history = useHistory();
-
-  const serviceDetail = (service) => {
-    // history.push("/service-detail", { service }); 
-    // history.push(`/${service.name}`, { service });
-  };
-
   return (
-    <div className="flex flex-col items-center my-28 bg-gray-50">
-      <h1 className="text-4xl font-bold mt-10">Our Services</h1>
+    <div className="flex flex-col items-center">
+      <h1 className="text-4xl font-bold mt-5">Our Services</h1>
       <p className="my-10">
         Unlock Your Potential with Our Specialized Services Tailored to Your
         Needs
@@ -61,17 +52,27 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="p-2 shadow-xl border rounded-xl w-52 flex flex-col items-center bg-white"
+            className="p-2 shadow-xl border rounded-xl w-52 flex flex-col items-center bg-gray-50"
           >
             <img
               src={service.imageUrl}
               alt={service.name}
               className="w-20 rounded-full"
             />
-            <p className="p-2 text-sm text-center">{service.name}</p>
-            {/* <button onClick={() => serviceDetail(service)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Read More
-            </button> */}
+            <p className="p-2 text-sm text-center font-semibold">
+              {service.name}
+            </p>
+            <p className="text-xs p-2">
+              The Fresh Stops are simply large communal cold storage facilities
+              powered by solar or electricity, depending on their location.
+              {/* They are designed to provide controlled humidity and temperature
+              conditions that preserve the freshness and quality of agricultural
+              products for at least three months. Fresh stops are cooled using
+              air conditioning systems and powered by solar energy, enabling
+              them to operate at negligible cost as opposed to conventional
+              refrigeration systems. */}
+            </p>
+            <p>Read more</p>
           </div>
         ))}
       </div>

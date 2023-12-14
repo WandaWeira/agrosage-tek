@@ -12,8 +12,8 @@ const Products = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center mt-28">
-      <h1 className="text-4xl font-bold mt-10">Our Product</h1>
+    <div className="flex flex-col items-center mt-8">
+      <h1 className="text-4xl font-bold mt-5">Our Product</h1>
       <p className="my-10">
         Unlock Your Potential with Our Specialized Services Tailored to Your
         Needs
