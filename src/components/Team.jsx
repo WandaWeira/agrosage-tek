@@ -45,7 +45,7 @@ const Team = () => {
       <h1 className="text-4xl font-bold my-10">Meet our Team</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {teamMembers.map((member, index) => (
-          <div key={index} className="border rounded-md w-80">
+          <div key={index} className="border border-gray-300 rounded-md w-80">
             <img
               src={member.imageUrl}
               alt={`${member.name}`}

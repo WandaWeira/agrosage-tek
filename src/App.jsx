@@ -1,16 +1,16 @@
-// App.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import About from "./components/About";
-import FoodStorage from "./components/ServicesDetails/FoodStorage";
+import ServiceDetails from "./components/ServiceDetails";
 import Products from "./components/Products";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
+import ProductDetails from "./components/ProductDetails";
 
-// Define or import your services array
+
 const services = [
   {
     name: "Food Storage and preservation services",
@@ -72,7 +72,11 @@ const App = () => {
         <Route path="about" element={<About />} />
         <Route
           path="/services/:id"
-          element={<FoodStorage services={services} />}
+          element={<ServiceDetails services={services} />}
+        />
+         <Route
+          path="/products/:id"
+          element={<ProductDetails products={products} />}
         />
       </Routes>
       <Footer />

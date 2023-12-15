@@ -1,8 +1,7 @@
-// FoodStorage.jsx
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const FoodStorage = ({ services }) => {
+const ServiceDetails = ({ services }) => {
   const { id } = useParams();
   const service = services[id];
 
@@ -15,4 +14,5 @@ const FoodStorage = ({ services }) => {
   );
 };
 
-export default FoodStorage;
+export default ServiceDetails;
+

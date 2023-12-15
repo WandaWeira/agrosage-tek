@@ -10,10 +10,11 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import FoodStorage from "./components/ServicesDetails/FoodStorage.jsx";
+import ServiceDetails from "./components/ServiceDetails.jsx";
 import Products from "./components/Products.jsx";
 import Services from "./components/Services.jsx";
 import Contact from "./components/Contact.jsx";
+import ProductDetails from "./components/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
       { path: "products", element: <Products /> },
       { path: "services", element: <Services /> },
       { path: "contact", element: <Contact /> },
-      { path: "/services/:id", element: <FoodStorage /> },
+      { path: "/services/:id", element: <ServiceDetails /> },
+      { path: "/products/:id", element: <ProductDetails /> },
     ],
   },
 ]);
