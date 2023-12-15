@@ -48,6 +48,24 @@ const Header = () => {
               Home
             </p>
           </Link>
+          <Link to="/products">
+            <p
+              className={`transition-colors duration-300 ${
+                isScrolled ? "text-white" : "text-gray-700"
+              }`}
+            >
+              Products
+            </p>
+          </Link>
+          <Link to="/services">
+            <p
+              className={`transition-colors duration-300 ${
+                isScrolled ? "text-white" : "text-gray-700"
+              }`}
+            >
+              Services
+            </p>
+          </Link>
           <Link to="/about">
             <p
               className={`transition-colors duration-300 ${
@@ -57,13 +75,13 @@ const Header = () => {
               About us
             </p>
           </Link>
-          <Link to="/">
+          <Link to="/contact">
             <p
               className={`transition-colors duration-300 ${
                 isScrolled ? "text-white" : "text-gray-700"
               }`}
             >
-              Services
+              Contact us
             </p>
           </Link>
         </div>

@@ -11,18 +11,18 @@ const Hero = () => {
     <div className="relative text-center">
       <ImageCarousel images={images} />
       <div className="absolute top-0 bg-black/60 w-screen h-full">
-        <p className="mt-40 text-white text-5xl font-bold ">
+        <p className="mt-52 text-white text-5xl font-bold ">
           Modern Agricultural <br />
           <span className="my-8">Solutions</span>
         </p>
-        <div className="flex justify-center gap-10 mt-10 mx-28">
+        {/* <div className="flex justify-center gap-10 mt-10 mx-28">
           <div className="bg-green-500 text-white p-2 rounded-md w-48 text-center">
             Introduction
           </div>
           <div className="border border-white p-2 rounded-md mx-4 w-48 text-center text-white">
             Explore our Services
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -29,15 +29,14 @@ const Overview = () => {
   const shortOverview = overviewContent.slice(0, 200) + "...";
 
   return (
-    <div className="mx-auto px-2 py-8 my-10 bg-gray-100">
+    <div className="px-4 py-8 bg-gray-100">
+      <div className="mx-32">
+
+      <div className="w-full">
+        <h2 className="text-4xl font-bold mb-3">Overview</h2>
+        <p className="my-8">{overviewContent}</p>
+      </div>
       <div className="flex flex-wrap justify-between -mx-2">
-        <div className="w-full md:w-1/3 px-4 mb-8 md:mb-0">
-          <h2 className="text-4xl font-bold mb-3">Overview</h2>
-          <p>{isOverviewExpanded ? overviewContent : shortOverview}</p>
-          <button onClick={handleToggleOverview} className="text-blue-500">
-            {isOverviewExpanded ? "Read Less" : "Read More"}
-          </button>
-        </div>
         <div className="w-full md:w-1/3 px-4 mb-8 md:mb-0">
           <h2 className="text-4xl font-bold mb-3">Vision</h2>
           <p>
@@ -56,6 +55,7 @@ const Overview = () => {
             sustainable practices.
           </p>
         </div>
+      </div>
       </div>
     </div>
   );
