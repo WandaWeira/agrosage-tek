@@ -13,7 +13,7 @@ const Products = () => {
 
   return (
     <div className="flex flex-col items-center mt-8">
-      <h1 className="text-4xl font-bold mt-5">Our Product</h1>
+      <h1 className="text-4xl font-bold mt-5 text-green-500">Our Product</h1>
       <p className="my-10">
         Unlock Your Potential with Our Specialized Services Tailored to Your
         Needs
@@ -29,18 +29,17 @@ const Products = () => {
               alt={product.name}
               className="w-20 rounded-full"
             />
-            <p className="p-2 text-sm text-center font-semibold">{product.name}</p>
-            <p className="text-xs p-2">
-              The Fresh Stops are simply large communal cold storage facilities
-              powered by solar or electricity, depending on their location.
-              {/* They are designed to provide controlled humidity and temperature
-              conditions that preserve the freshness and quality of agricultural
-              products for at least three months. Fresh stops are cooled using
-              air conditioning systems and powered by solar energy, enabling
-              them to operate at negligible cost as opposed to conventional
-              refrigeration systems. */}
+            <p className="p-2 text-sm text-center font-semibold">
+              {product.name}
             </p>
-            <p>Read more</p>
+            <p className="text-xs p-2">
+              {product.description.length > 120
+                ? `${product.description.substring(0, 120)}...`
+                : product.description}
+            </p>
+            {product.description.length > 120 && (
+              <p className="text-sky-500 my-4">Read more</p>
+            )}
           </div>
         ))}
       </div>

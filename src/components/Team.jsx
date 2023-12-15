@@ -41,7 +41,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="px-10 py-5">
+    <div className="px-10 py-5 mt-10">
       <h1 className="text-4xl font-bold my-10">Meet our Team</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {teamMembers.map((member, index) => (

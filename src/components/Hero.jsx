@@ -16,7 +16,7 @@ const Hero = () => {
           <span className="my-8">Solutions</span>
         </p>
         <div className="flex justify-center gap-10 mt-10 mx-28">
-          <div className="bg-sky-500 text-white p-2 rounded-md w-48 text-center">
+          <div className="bg-green-500 text-white p-2 rounded-md w-48 text-center">
             Introduction
           </div>
           <div className="border border-white p-2 rounded-md mx-4 w-48 text-center text-white">
