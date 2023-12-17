@@ -16,13 +16,13 @@ const images = [
   {
     src: "https://imgs.search.brave.com/aLR37rvrlwcMffglAkqq98Or8JFOPkjfA6vAbFlbs6k/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzEzLzM2LzAx/LzM2MF9GXzUxMzM2/MDEyM18wTUpDbVZx/RlZOSVhUNmJpR3Nu/R00ySEFnTlJBVk9C/RS5qcGc",
     title: "Image 2",
-  }
+  },
 ];
 
 const Gallery = () => {
   return (
-    <div className="mx-11 my-20">
-      <div className="grid grid-cols-3 gap-4">
+    <div className="mx-4 my-16">
+      <div className="flex gap-4">
         {images.map((image, index) => (
           <div key={index} className="overflow-hidden">
             <img
@@ -30,7 +30,7 @@ const Gallery = () => {
               alt={image.title}
               className="w-full h-auto transform hover:scale-110 transition duration-500"
             />
-            <p className="text-center text-sm mt-2">{image.title}</p>
+            {/* <p className="text-center text-sm mt-2">{image.title}</p> */}
           </div>
         ))}
       </div>
