@@ -7,15 +7,17 @@ const ProductDetails = ({ products }) => {
   const product = products[id];
 
   return (
-    <div className="h-auto mt-10">
+    <div className="h-auto mt-10 px-4 md:px-10">
       <img
         src={product.imageUrl}
         alt={product.name}
-        className="w-full h-96 object-cover"
+        className="w-full h-auto md:h-96 object-cover"
       />
       <div className="text-center">
-        <div className="ml-10 my-10">
-          <h2 className="font-bold text-2xl my-10">{product.name}</h2>
+        <div className="my-10">
+          <h2 className="font-bold text-xl md:text-2xl my-10">
+            {product.name}
+          </h2>
           <p>
             The Fresh Stops are simply large communal cold storage facilities
             powered by either solar or electricity, depending on their location.
@@ -27,8 +29,8 @@ const ProductDetails = ({ products }) => {
             systems.
           </p>
         </div>
-        <div className="ml-10 my-10">
-          <h2 className="font-semibold text-xl my-10">
+        <div className="my-10">
+          <h2 className="font-semibold text-lg md:text-xl my-10">
             What makes Fresh Stops unique?
           </h2>
           <p>
@@ -40,8 +42,8 @@ const ProductDetails = ({ products }) => {
             income and enhances their overall quality of life."
           </p>
         </div>
-        <div className="ml-10 my-10">
-          <h2 className="font-semibold text-xl my-10">
+        <div className="my-10">
+          <h2 className="font-semibold text-lg md:text-xl my-10">
             Why should you use Fresh Stops?
           </h2>
           <p>

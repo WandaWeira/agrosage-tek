@@ -25,22 +25,22 @@ const Header = () => {
         isScrolled ? "bg-gray-700" : "bg-white"
       }`}
     >
-      <div className="flex items-center justify-between py-6 px-24">
-        <div className="flex items-center">
+      <div className="flex flex-col md:flex-row items-center justify-between py-4 px-4 md:px-24">
+        <div className="flex items-center mb-4 md:mb-0">
           <img
             src="https://agrosagetekugandalimited.com/images/logo2.jpg"
             alt="logo"
-            className="h-16 w-16"
+            className="h-12 w-12 md:h-16 md:w-16"
           />
           <p
-            className={`text-xl mx-4 font-semibold transition-colors duration-300 ${
+            className={`text-lg md:text-xl mx-4 font-semibold transition-colors duration-300 ${
               isScrolled ? "text-white" : "text-gray-700"
             }`}
           >
             Agrosage-Tek Uganda Limited
           </p>
         </div>
-        <div className="flex gap-x-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-x-8">
           <Link to="/">
             <p
               onClick={() => handleItemClick("Home")}

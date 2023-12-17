@@ -7,15 +7,15 @@ const ServiceDetails = ({ services }) => {
   const service = services[id];
 
   return (
-    <div className="h-full mt-4">
+    <div className="h-auto mt-4">
       <img
         src={service.imageUrl}
         alt={service.name}
-        className="w-full h-96 object-cover"
+        className="w-full h-auto md:h-96 object-cover"
       />
-      <div className="ml-10 my-10 text-center">
-        <h2 className="font-bold text-2xl my-10">{service.name}</h2>
-        <p>{service.detailedDescription}</p>
+      <div className="px-4 md:px-10 my-10 text-center">
+        <h2 className="font-bold text-xl md:text-2xl my-10">{service.name}</h2>
+        <p className="text-base md:text-lg">{service.detailedDescription}</p>
       </div>
 
       <Gallery />

@@ -22,9 +22,9 @@ const images = [
 const Gallery = () => {
   return (
     <div className="mx-4 my-16">
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4">
         {images.map((image, index) => (
-          <div key={index} className="overflow-hidden">
+          <div key={image.id || image.src} className="overflow-hidden">
             <img
               src={image.src}
               alt={image.title}

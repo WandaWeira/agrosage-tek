@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 
 const Overview = () => {
-  const [isOverviewExpanded, setIsOverviewExpanded] = useState(false);
-
-  const handleToggleOverview = () => {
-    setIsOverviewExpanded(!isOverviewExpanded);
-  };
-
   const overviewContent = `
     Agrosage Tek Uganda Limited (ATUL) is committed to addressing
     poverty among small-scale farmers in Uganda by significantly
@@ -26,36 +20,30 @@ const Overview = () => {
     facilitating last-mile delivery services using electric bikes.
   `;
 
-  const shortOverview = overviewContent.slice(0, 200) + "...";
-
   return (
     <div className="px-4 py-8 bg-gray-100">
-      <div className="mx-32">
+      <div className="mx-4 md:mx-16 lg:mx-32">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Overview</h2>
+        <p className="text-base md:text-lg my-4 leading-relaxed">
+          {overviewContent}
+        </p>
 
-      <div className="w-full">
-        <h2 className="text-4xl font-bold mb-3">Overview</h2>
-        <p className="my-8">{overviewContent}</p>
-      </div>
-      <div className="flex flex-wrap justify-between -mx-2">
-        <div className="w-full md:w-1/3 px-4 mb-8 md:mb-0">
-          <h2 className="text-4xl font-bold mb-3">Vision</h2>
-          <p>
-            To empower underprivileged farmers in Uganda to earn decent returns
-            on investment to enable them to eradicate poverty and improve their
-            living standards through postharvest loss reduction and
-            transformation of the agricultural supply chain in Uganda.
-          </p>
+        <div className="flex flex-wrap -mx-2">
+          <div className="w-full md:w-1/2 lg:w-1/3 px-2 mb-8">
+            <h3 className="text-2xl font-bold mb-3">Vision</h3>
+            <p className="leading-relaxed">
+              To empower underprivileged farmers in Uganda to earn decent
+              returns on investment...
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 lg:w-1/3 px-2 mb-8">
+            <h3 className="text-2xl font-bold mb-3">Mission</h3>
+            <p className="leading-relaxed">
+              Agrosage is committed to preserving the freshness of agricultural
+              produce...
+            </p>
+          </div>
         </div>
-        <div className="w-full md:w-1/3 px-4 mb-8 md:mb-0">
-          <h2 className="text-4xl font-bold mb-3">Mission</h2>
-          <p>
-            Agrosage is committed to preserving the freshness of agricultural
-            produce, adding value to it, and delivering it to final consumers
-            efficiently and affordably through innovative technology and
-            sustainable practices.
-          </p>
-        </div>
-      </div>
       </div>
     </div>
   );

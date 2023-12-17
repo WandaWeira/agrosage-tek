@@ -16,10 +16,15 @@ const ImageCarousel = ({ images }) => {
   return (
     <div
       className="bg-cover bg-center"
-      style={{ backgroundImage: `url(${images[currentImageIndex]})`, height: '600px' }}
-    >
-        
-    </div>
+      style={{
+        backgroundImage: `url(${
+          images[currentImageIndex] || "defaultFallbackImageUrl"
+        })`,
+        height: "auto",
+        minHeight: "600px",
+      }}
+      aria-label="Description of the background image"
+    ></div>
   );
 };
 

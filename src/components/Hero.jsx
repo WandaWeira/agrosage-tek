@@ -10,18 +10,18 @@ const Hero = () => {
   return (
     <div className="relative text-center">
       <ImageCarousel images={images} />
-      <div className="absolute top-0 bg-black/60 w-screen h-full">
-        <p className="mt-52 text-white text-5xl font-bold ">
+      <div className="absolute top-0 bg-black/60 w-full h-full flex flex-col justify-center items-center">
+        <h1 className="text-white text-4xl md:text-5xl font-bold mt-32">
           Modern Agricultural <br />
-          <span className="my-8">Solutions</span>
-        </p>
-        {/* <div className="flex justify-center gap-10 mt-10 mx-28">
-          <div className="bg-green-500 text-white p-2 rounded-md w-48 text-center">
+          <span className="my-4 md:my-8">Solutions</span>
+        </h1>
+        {/* <div className="flex flex-wrap justify-center gap-4 mt-4">
+          <button className="bg-green-500 text-white p-3 rounded-md">
             Introduction
-          </div>
-          <div className="border border-white p-2 rounded-md mx-4 w-48 text-center text-white">
+          </button>
+          <button className="border border-white p-3 rounded-md text-white">
             Explore our Services
-          </div>
+          </button>
         </div> */}
       </div>
     </div>
