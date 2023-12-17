@@ -14,8 +14,6 @@ const ProductDetails = ({ products }) => {
         alt={product.name}
         className="w-full h-96 object-cover"
       />
-      {/* <div className="flex"> */}
-      {/* <div> */}
       <div className="text-center">
         <div className="ml-10 my-10">
           <h2 className="font-bold text-2xl my-10">{product.name}</h2>
@@ -56,9 +54,7 @@ const ProductDetails = ({ products }) => {
           </p>
         </div>
       </div>
-      {/* </div> */}
       <Gallery />
-      {/* </div> */}
     </div>
   );
 };
