@@ -46,7 +46,7 @@ const Team = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {teamMembers.map((member) => (
           <div
-            key={member.id}
+            key={member.name}
             className="border border-gray-300 rounded-md max-w-sm mx-auto"
           >
             <img
