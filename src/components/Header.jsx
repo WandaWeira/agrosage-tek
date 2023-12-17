@@ -3,19 +3,21 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [selectedItem, setSelectedItem] = useState("Home");
 
   useEffect(() => {
     const handleScroll = () => {
-      // When the scroll is more than 10px, set isScrolled to true, otherwise false
       setIsScrolled(window.scrollY > 10);
     };
 
-    // Add the event listener when the component is mounted
     window.addEventListener("scroll", handleScroll);
 
-    // Remove the event listener when the component is unmounted
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleItemClick = (itemName) => {
+    setSelectedItem(itemName);
+  };
 
   return (
     <div
@@ -41,8 +43,13 @@ const Header = () => {
         <div className="flex gap-x-8">
           <Link to="/">
             <p
+              onClick={() => handleItemClick("Home")}
               className={`transition-colors duration-300 ${
-                isScrolled ? "text-white" : "text-gray-700"
+                selectedItem === "Home"
+                  ? "text-blue-500 font-bold"
+                  : isScrolled
+                  ? "text-white"
+                  : "text-gray-700"
               }`}
             >
               Home
@@ -50,8 +57,13 @@ const Header = () => {
           </Link>
           <Link to="/products">
             <p
+              onClick={() => handleItemClick("Products")}
               className={`transition-colors duration-300 ${
-                isScrolled ? "text-white" : "text-gray-700"
+                selectedItem === "Products"
+                  ? "text-blue-500 font-bold"
+                  : isScrolled
+                  ? "text-white"
+                  : "text-gray-700"
               }`}
             >
               Products
@@ -59,8 +71,13 @@ const Header = () => {
           </Link>
           <Link to="/services">
             <p
+              onClick={() => handleItemClick("Services")}
               className={`transition-colors duration-300 ${
-                isScrolled ? "text-white" : "text-gray-700"
+                selectedItem === "Services"
+                  ? "text-blue-500 font-bold"
+                  : isScrolled
+                  ? "text-white"
+                  : "text-gray-700"
               }`}
             >
               Services
@@ -68,8 +85,13 @@ const Header = () => {
           </Link>
           <Link to="/about">
             <p
+              onClick={() => handleItemClick("About")}
               className={`transition-colors duration-300 ${
-                isScrolled ? "text-white" : "text-gray-700"
+                selectedItem === "About"
+                  ? "text-blue-500 font-bold"
+                  : isScrolled
+                  ? "text-white"
+                  : "text-gray-700"
               }`}
             >
               About us
@@ -77,8 +99,13 @@ const Header = () => {
           </Link>
           <Link to="/contact">
             <p
+              onClick={() => handleItemClick("Contact")}
               className={`transition-colors duration-300 ${
-                isScrolled ? "text-white" : "text-gray-700"
+                selectedItem === "Contact"
+                  ? "text-blue-500 font-bold"
+                  : isScrolled
+                  ? "text-white"
+                  : "text-gray-700"
               }`}
             >
               Contact us
